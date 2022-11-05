@@ -108,6 +108,7 @@ const index = ({ isModal, setModal }) => {
                         username="김아린"
                         date={20221030}
                     />
+                    
                 </BoardTemplate>
             </div>
 

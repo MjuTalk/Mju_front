@@ -5,6 +5,8 @@ import $ from 'jquery';
 import {} from 'jquery.cookie';
 axios.defaults.withCredentials = true;
 
+const navbars = { withCredentials: true };
+
 const Navbar = ({nav1, nav2}) => {
   return (
     <>

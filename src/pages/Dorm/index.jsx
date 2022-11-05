@@ -8,6 +8,7 @@ import BoardHead from '../../components/Navbar/Board/BoardHead'
 import CardList from '../../components/Navbar/Board/CardList'
 import BoardCreate from '../../components/Navbar/Board/BoardCreate'
 import { Close } from "../../image/index.jsx"
+import Header from '../../components/Header'
 
 const ModalContainer = styled.div`
   position: absolute;
@@ -74,6 +75,7 @@ const index = ({ isModal, setModal }) => {
         <Navbar
           nav1="기숙사"
           nav2="버스" />
+          <Header />
       </h1>
       <div>
         <ModalHead>
