@@ -1,25 +1,16 @@
 import React, { Component } from 'react'
-import {Nav,NavLink,Bars,NavMenu,NavBtn,NavBtnLink} from "./NavbarElements";
+import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from "./NavbarElements";
 import axios from 'axios';
 import $ from 'jquery';
-import {} from 'jquery.cookie';
+import { } from 'jquery.cookie';
 axios.defaults.withCredentials = true;
 
-const Navbar = ({nav1, nav2, nav3, nav4, nav5, nav6, nav7, nav8, nav9, nav10}) => {
-  return (
-    <>
-        <Nav>
-            <NavLink to="/home">
-                명지톡톡
-            </NavLink>
-            <Bars />
-            <NavMenu>
-                <NavLink to="/dorm" activeStyle>
-                    {nav1}
-                </NavLink>
-                <NavLink to="/bus" activeStyle>
-                    {nav2}
-                </NavLink>
+
+const Navbar2 = ({ nav3, nav4, nav5, nav6, nav7, nav8, nav9, nav10 }) => {
+    return (
+        <>
+            <Nav>
+                <Bars />
                 <NavLink to="/dorm/3" activeStyle>
                     {nav3}
                 </NavLink>
@@ -44,13 +35,9 @@ const Navbar = ({nav1, nav2, nav3, nav4, nav5, nav6, nav7, nav8, nav9, nav10}) =
                 <NavLink to="/bus/4" activeStyle>
                     {nav10}
                 </NavLink>
-            </NavMenu>
-            <NavBtn>
-                <NavBtnLink to="/" >로그인</NavBtnLink>
-            </NavBtn>
-        </Nav>
-    </>
-  )
+            </Nav>
+        </>
+    )
 }
 
-export default Navbar
+export default Navbar2

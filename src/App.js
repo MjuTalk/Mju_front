@@ -6,6 +6,9 @@ import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import Dorm from './pages/Dorm'
 import Bus from './pages/Bus'
+import Voc from './pages/Voc/Voc';
+import VocView from './pages/Voc/VocView';
+import VocQuestion from './pages/Voc/VocQuestion';
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
               <Route path="/sign-up" element={<SignUp />} />
               <Route path="/dorm" element={<Dorm />} />
               <Route path="/bus" element={<Bus />} />
+              <Route path='/voc' element={<Voc />} /> 
+              <Route path='/voc/:vocId' element={<VocView />} /> 
+              <Route path='/voc/question' element={<VocQuestion />} /> 
             </Routes>
           </BrowserRouter>
         </RecoilRoot>

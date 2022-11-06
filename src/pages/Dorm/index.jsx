@@ -8,6 +8,10 @@ import BoardHead from '../../components/Navbar/Board/BoardHead'
 import CardList from '../../components/Navbar/Board/CardList'
 import BoardCreate from '../../components/Navbar/Board/BoardCreate'
 import { Close } from "../../image/index.jsx"
+import Voc from '../Voc/Voc'
+import Card from '../../components/Navbar/Board/Card'
+import { Nav } from 'react-bootstrap'
+import Navbar2 from '../../components/Navbar/Navbar2'
 
 const ModalContainer = styled.div`
   position: absolute;
@@ -24,7 +28,7 @@ const ModalHead = styled.div`
 `
 
 const ModalBody = styled.div`
-  width: 1350px;
+  width: 100%;
   height: 690px;
   position: absolute;
   top: 100px;
@@ -56,16 +60,18 @@ const BoardListWrapper = styled.div`
     color: black;
     font-weight: bold;
     font-size: 2.5rem;
-    margin-top: 50px;
+    margin-top: 100px;
   }
   .boardList-body {
-    margin-top: 150px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
   }
+  
 `
+
 
 const index = ({ isModal, setModal }) => {
   return (
@@ -75,18 +81,30 @@ const index = ({ isModal, setModal }) => {
           nav1="기숙사"
           nav2="버스" />
       </h1>
+      
       <div>
-        <ModalHead>
-          <Closebtn src={Close} onClick={() => setModal(false)} />
-        </ModalHead>
+      
         <ModalBody>
-          <BoardListWrapper>
-            <div className="boardList-header">기숙사 게시물 📝</div>
+          <Navbar2
+          nav3="3동"
+          nav4="4동"
+          nav5="5동"
+          nav6="명덕관"
+          />
+          
+        </ModalBody>
+        <BoardListWrapper>
+            <div className="boardList-header">기숙사📝</div>
             <div className="boardList-body" />
           </BoardListWrapper>
-        </ModalBody>
-
       </div>
+      <div>
+                <BoardTemplate>
+                    <Voc>
+                    
+                    </Voc>
+                </BoardTemplate>
+            </div>
     </div>
   )
 }
