@@ -10,6 +10,8 @@ import BoardCreate from '../../components/Navbar/Board/BoardCreate'
 import { Close } from "../../image/index.jsx"
 import Card from '../../components/Navbar/Board/Card'
 import BoardList from '../../components/Navbar/Board/BoardList'
+import Navbar2 from '../../components/Navbar/Navbar2'
+import Voc from '../Voc/Voc'
 
 
 const ModalContainer = styled.div`
@@ -27,8 +29,8 @@ const ModalHead = styled.div`
 `
 
 const ModalBody = styled.div`
-  width: 1350px;
-  height: 690px;
+  width: 100%;
+  height: 100px;
   position: absolute;
   top: 100px;
 `
@@ -59,10 +61,10 @@ const BoardListWrapper = styled.div`
     color: black;
     font-weight: bold;
     font-size: 2.5rem;
-    margin-top: 50px;
+    margin-top: 100px;
   }
   .boardList-body {
-    margin-top: 150px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,48 +73,37 @@ const BoardListWrapper = styled.div`
 `
 
 const index = ({ isModal, setModal }) => {
-    return (
-        <div>
-            <h1>
-                <Navbar
-                    nav1="기숙사"
-                    nav2="버스" />
-            </h1>
-            <div>
-                <ModalHead>
-                    <Closebtn src={Close} onClick={() => setModal(false)} />
-                </ModalHead>
-                <ModalBody>
-                    <BoardListWrapper>
-                        <div className="boardList-header">버스 게시물 📝</div>
-                        <div className="boardList-body" />
-                    </BoardListWrapper>
-                </ModalBody>
-            </div>
-            <div>
-                <BoardTemplate>
-                    <Card
-                        address="bus"
-                        board_id={0}
-                        img_url=""
-                        title="첫 번째 게시물"
-                        content={"테스트용 게시물입니다."}
-                        username="김아린"
-                        date={20221029}
-                    />
-                    <Card
-                        board_id={1}
-                        img_url=""
-                        title="두 번째 게시물"
-                        content={"테스트용 게시물입니다."}
-                        username="김아린"
-                        date={20221030}
-                    />
-                </BoardTemplate>
-            </div>
+  return (
+    <div>
+      <h1>
+        <Navbar
+          nav1="기숙사"
+          nav2="버스" />
+      </h1>
+      <div>
+        <ModalBody>
+          <Navbar2
+            nav7="기흥역"
+            nav8="명지대학교"
+            nav9="시내"
+            nav10="명지대역" />
+          
+        </ModalBody>
+        <BoardListWrapper>
+            <div className="boardList-header">버스📝</div>
+            <div className="boardList-body" />
+          </BoardListWrapper>
+      </div>
+      <div>
+        <BoardTemplate>
+          <Voc>
+            
+          </Voc>
+        </BoardTemplate>
+      </div>
 
-        </div>
-    )
+    </div>
+  )
 }
 
 export default index
